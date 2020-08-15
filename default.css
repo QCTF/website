@@ -453,6 +453,11 @@
 		overflow: hidden;
 		padding: 8em 0em 4em 0em;
 	}
+	#wrapper5
+	{
+		overflow: hidden;
+		padding: 0em 0em 8em 0em;
+	}
 
 /*********************************************************************************/
 /* Welcome                                                                       */
