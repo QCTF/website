@@ -457,6 +457,12 @@
 	{
 		overflow: hidden;
 		padding: 0em 0em 8em 0em;
+		
+	}
+	#wrapper5 .container
+	{
+		text-align: center;
+		width: 1000px;
 	}
 
 /*********************************************************************************/
