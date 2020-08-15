@@ -17,7 +17,7 @@ html {
     background: rgb(228,228,228);
 }
 
-#footer {
+#contact-us {
     background: #1B1B1B url(images/overlay.png) repeat;
     padding-top:3em;
 }
@@ -43,7 +43,7 @@ html {
     font-size:22pt;
 }
 
-#footer h3 {
+#contact-us h3 {
     font-size: 22pt;
 }
 

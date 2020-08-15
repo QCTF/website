@@ -511,24 +511,24 @@
 /* Footer                                                                        */
 /*********************************************************************************/
 
-	#footer
+	#contact-us
 	{
 		text-align: center;
 	}
 
 	
-	#footer .title h2
+	#contact-us .title h2
 	{
 		color: rgba(255,255,255,1);
 	}
 
-	#footer .title h3
+	#contact-us .title h3
 	{
 		color: rgba(255,255,255,1);
 	}
 
 
-	#footer .title .byline
+	#contact-us .title .byline
 	{
 		letter-spacing: normal;
 		text-transform: capitalize;
