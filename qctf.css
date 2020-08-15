@@ -12,6 +12,11 @@ html {
     padding-bottom: 2em;
 }
 
+#what-is-a-ctf {
+    padding-top:4em;
+    background: rgb(228,228,228);
+}
+
 #footer {
     background: #1B1B1B url(images/overlay.png) repeat;
     padding-top:3em;
