@@ -45,3 +45,12 @@ html {
 #portfolio h3 {
     height:2em;
 }
+
+.container {
+    padding-left:4em;
+    padding-right:4em;
+}
+
+#menu {
+    font-size:24px;
+}
