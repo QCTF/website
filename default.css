@@ -7,7 +7,6 @@
 	{
 		margin: 0px;
 		padding: 0px;
-		background: #1B1B1B ;
 		font-family: 'Varela Round', sans-serif;
 		font-size: 11pt;
 		font-weight: 400;
@@ -55,7 +54,7 @@
 	.container
 	{
 		margin: 0px auto;
-		width: 1200px;
+		max-width: 1200px;
 	}
 	
 
@@ -224,7 +223,7 @@
 	{
 		display: inline-block;
 		padding: 0em 0.20em;
-		font-size: 1.2em;
+		font-size: 2em;
 	}
 	
 	ul.contact li span
@@ -242,11 +241,11 @@
 	ul.contact li a:before
 	{
 		display: inline-block;
-		width: 60px;
-		height: 60px;
-		line-height: 60px;
+		width: 2em;
+		height: 2em;
+		line-height: 2em;
 		background: #6C2A6A;
-		border-radius: 30px;
+		border-radius: 50%;
 		text-align: center;
 	}
 	
@@ -416,15 +415,6 @@
 		border: 1px solid #3C3C3C;
 		border-radius: 4px;
 	}
-	
-
-/*********************************************************************************/
-/* Banner                                                                        */
-/*********************************************************************************/
-
-	#banner
-	{
-	}
 
 /*********************************************************************************/
 /* Wrapper                                                                       */
@@ -456,13 +446,12 @@
 	#wrapper5
 	{
 		overflow: hidden;
-		padding: 0em 0em 8em 0em;
 		
 	}
 	#wrapper5 .container
 	{
 		text-align: center;
-		width: 1000px;
+		max-width: 1000px;
 	}
 
 /*********************************************************************************/
@@ -472,7 +461,7 @@
 	#welcome
 	{
 		overflow: hidden;
-		width: 1000px;
+		max-width: 1000px;
 		padding: 8em 100px 8em 100px;
 		text-align: center;
 		color: rgba(255,255,255,0.4);
@@ -522,25 +511,24 @@
 /* Footer                                                                        */
 /*********************************************************************************/
 
-	#footer
+	#contact-us
 	{
-		padding: 8em 0em 5em 0em;
 		text-align: center;
 	}
 
 	
-	#footer .title h2
+	#contact-us .title h2
 	{
 		color: rgba(255,255,255,1);
 	}
 
-	#footer .title h3
+	#contact-us .title h3
 	{
 		color: rgba(255,255,255,1);
 	}
 
 
-	#footer .title .byline
+	#contact-us .title .byline
 	{
 		letter-spacing: normal;
 		text-transform: capitalize;
@@ -555,7 +543,7 @@
 	#copyright
 	{
 		overflow: hidden;
-		padding: 5em 0em;
+		padding-top:1em;
 		border-top: 1px solid rgba(255,255,255,0.08);
 	}
 	
@@ -570,29 +558,6 @@
 		text-decoration: none;
 		color: rgba(255,255,255,0.4);
 	}
-
-/*********************************************************************************/
-/* Newsletter                                                                    */
-/*********************************************************************************/
-
-	#newsletter
-	{
-		overflow: hidden;
-		padding: 8em 0em;
-		background: #EDEDED;
-		text-align: center;
-	}
-	
-	#newsletter .title h2
-	{
-		color: rgba(0,0,0,0.8);
-	}
-	
-	#newsletter .content
-	{
-		width: 600px;
-		margin: 0px auto;
-	}
 	
 /*********************************************************************************/
 /* Portfolio                                                                     */
@@ -600,7 +565,7 @@
 
 	#portfolio
 	{
-		padding-top: 8em;
+		padding: 8em;
 	}
 	
 	#portfolio .box
