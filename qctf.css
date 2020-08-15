@@ -1,0 +1,13 @@
+.circle {
+    border-radius:100%;
+    height:250px;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+}
+
+.person {
+    padding:40px;
+}
