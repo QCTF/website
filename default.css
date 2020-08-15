@@ -55,7 +55,7 @@
 	.container
 	{
 		margin: 0px auto;
-		width: 1200px;
+		max-width: 1200px;
 	}
 	
 
@@ -472,7 +472,7 @@
 	#welcome
 	{
 		overflow: hidden;
-		width: 1000px;
+		max-width: 1000px;
 		padding: 8em 100px 8em 100px;
 		text-align: center;
 		color: rgba(255,255,255,0.4);
