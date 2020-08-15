@@ -6,9 +6,21 @@ body {
     font-size:12pt;
 }
 
+.box {
+    width:300px;
+    font-size:1.2em;
+    padding:1em;
+    margin:1em;
+    box-shadow: 0 0 0.5em 0 #000000aa;
+    border-radius:1em;
+}
+
 @media only screen and (max-width: 1000px) {
     body {
         font-size:24pt;
+    }
+    .box {
+        width:100%;
     }
 }
 
@@ -45,15 +57,6 @@ body {
 
 .person {
     padding:40px;
-}
-
-.box {
-    width:300px;
-    font-size:1.2em;
-    padding:1em;
-    margin:1em;
-    box-shadow: 0 0 0.5em 0 #000000aa;
-    border-radius:1em;
 }
 
 #contact-us h3 {
