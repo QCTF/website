@@ -447,7 +447,6 @@
 	#wrapper5
 	{
 		overflow: hidden;
-		padding: 0em 0em 8em 0em;
 		
 	}
 	#wrapper5 .container
@@ -515,7 +514,6 @@
 
 	#footer
 	{
-		padding: 8em 0em 5em 0em;
 		text-align: center;
 	}
 
@@ -546,7 +544,7 @@
 	#copyright
 	{
 		overflow: hidden;
-		padding: 5em 0em;
+		padding-top:1em;
 		border-top: 1px solid rgba(255,255,255,0.08);
 	}
 	
@@ -568,7 +566,7 @@
 
 	#portfolio
 	{
-		padding-top: 8em;
+		padding: 8em;
 	}
 	
 	#portfolio .box
