@@ -241,9 +241,9 @@
 	ul.contact li a:before
 	{
 		display: inline-block;
-		width: 80px;
-		height: 80px;
-		line-height: 80px;
+		width: 2em;
+		height: 2em;
+		line-height: 2em;
 		background: #6C2A6A;
 		border-radius: 50%;
 		text-align: center;
