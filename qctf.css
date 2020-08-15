@@ -18,11 +18,15 @@ html {
 }
 
 .box {
-    width:200px;
-    height:200px;
+    width:300px;
     padding:15px;
+    font-size:22pt;
 }
 
 #footer h3 {
-    font-size: 1.8em;
+    font-size: 22pt;
+}
+
+#portfolio h3 {
+    height:2em;
 }
