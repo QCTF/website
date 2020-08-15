@@ -10,8 +10,15 @@ html {
 .flex-row {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .person {
     padding:40px;
+}
+
+.box {
+    width:200px;
+    height:200px;
+    padding:15px;
 }
