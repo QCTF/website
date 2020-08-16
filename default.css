@@ -525,6 +525,13 @@
 	#contact-us .title h3
 	{
 		color: rgba(255,255,255,1);
+		text-decoration: none;
+	}
+	
+	#contact-us a
+	{
+		color: rgba(255,255,255,1);
+		text-decoration: none;
 	}
 
 
