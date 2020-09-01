@@ -73,3 +73,8 @@ body {
 #welcome a {
     color:#58ffd9
 }
+
+.logo {
+    max-width: 100%;
+    max-height: 20em;
+}
