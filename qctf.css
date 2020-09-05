@@ -41,7 +41,7 @@ body {
 
 .circle {
     border-radius:100%;
-    height:250px;
+    height:10em;
 }
 
 .flex-row {
@@ -51,7 +51,7 @@ body {
 }
 
 .person {
-    padding:40px;
+    padding:1em;
 }
 
 #contact-us h3 {
