@@ -47,6 +47,8 @@ body {
 .flex-row {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
     flex-wrap: wrap;
 }
 
