@@ -85,3 +85,13 @@ body {
     max-width: 100%;
     max-height: 8em;
 }
+
+.sign-up {
+    font-size: 2em;
+    font-family: monospace;
+    text-align: center;
+}
+
+.sign-up-panel {
+    /* background:#757575; */
+}
