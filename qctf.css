@@ -90,6 +90,15 @@ body {
     font-size: 2em;
     font-family: monospace;
     text-align: center;
+    background: blue;
+    color:white;
+    padding:0.4em;
+    box-shadow: 0 0 0.2em 0 #000000aa;
+    text-decoration: none;
+    margin-top: 1em;
+    border-radius:1em;
+    display: inline-block;
+    margin:0.5em;
 }
 
 .sign-up-panel {
