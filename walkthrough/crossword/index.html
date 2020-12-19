@@ -3,15 +3,19 @@
 <head>
     <title>Crossword Walkthrough</title>
     <link rel='stylesheet' href='/walkthrough/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <h1>Crossword Walkthrough</h1>
-    <h2>Description</h2>
-    <div class="problem">
-        <p>I have this crossword but I seem to have lost all of the hints.
-        However, the answers must be from this list of words.
-        Can you figure it out for me?</p>
+<div class='container'>
+<div class='content'>
+<h1>Crossword Walkthrough</h1>
+<h2>Description</h2>
+<p>I have this crossword but I seem to have lost all of the hints.
+However, the answers must be from this list of words.
+Can you figure it out for me?</p>
+<p><a href="words.txt">words.txt</a></p>
+
 <div class='code-block'>
     #a#######
 s   #  #  # #
@@ -21,33 +25,32 @@ s   #  #  # #
 ###t##i######
     s  #  t g
     e  #
-       #
+    #
 
 </div>
-    </div>
-    <p><a href="words.txt">words.txt</a></p>
 
-    <h2>Solution</h2>
-    <p>
-        As stated in one of the hints,
-        this can be thought of as a branch and bound problem.
-        There are too many possible permutations
-        for brute-forcing to be feasible,
-        even if words are only considered for valid lengths / solved letters.
-        Thus, one must only consider words which fit into a partial solution,
-        and all partial solutions must be considered to find the correct final solution.
-    </p>
-    <p>
-        To solve this problem in general (for arbitrary crossword size),
-        one would need to dynamically keep track of partial solutions.
-        However, in this scenario, the number of words is fixed,
-        and thus a nested for loop solution can work.
-    </p>
-    <p>
-        The first required ingredient is a function that determines
-        whether a word matches the "schema" for a given row or column.
-        Such a function could look like this.
-    </p>
+<h2>Solution</h2>
+<p>
+    As stated in one of the hints,
+    this can be thought of as a branch and bound problem.
+    There are too many possible permutations
+    for brute-forcing to be feasible,
+    even if words are only considered for valid lengths / solved letters.
+    Thus, one must only consider words which fit into a partial solution,
+    and all partial solutions must be considered to find the correct final solution.
+</p>
+<p>
+    To solve this problem in general (for arbitrary crossword size),
+    one would need to dynamically keep track of partial solutions.
+    However, in this scenario, the number of words is fixed,
+    and thus a nested for loop solution can work.
+</p>
+<p>
+    The first required ingredient is a function that determines
+    whether a word matches the "schema" for a given row or column.
+    Such a function could look like this.
+</p>
+
 <div class='code-block'>
 def word_matches_schema(schema, word):
 '''
@@ -63,13 +66,14 @@ return (
 )
 
 </div>
-    <p>
-        In addition to checking an individual word,
-        a function that returns ALL the words that match
-        a given schema is required.
-        Leveraging <code>word_matches_schema()</code>,
-        this can be written like so.
-    </p>
+<p>
+    In addition to checking an individual word,
+    a function that returns ALL the words that match
+    a given schema is required.
+    Leveraging <code>word_matches_schema()</code>,
+    this can be written like so.
+</p>
+
 <div class='code-block'>
 def possible_words(schema):
     return (
@@ -78,6 +82,8 @@ def possible_words(schema):
         if word_matches_schema(schema,word)
     )
 
+</div>
+</div> 
 </div>
 </body>
 

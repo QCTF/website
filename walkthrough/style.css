@@ -3,9 +3,28 @@
     white-space: pre;
     color: #4bff52;
     background: #313131;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 2px 2px black;
+    overflow-x: scroll;
+}
+
+.container {
+    justify-content: center;
+    display: flex;
+}
+
+.content {
+    width: 80%;
 }
 
 html,body {
     margin:0;
     padding:0
+}
+
+html {
+    line-height: 1.5;
+    color:#222;
+    font-size: large;
 }
