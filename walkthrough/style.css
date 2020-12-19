@@ -18,6 +18,10 @@
     width: 80%;
 }
 
+.title {
+    text-align: center;
+}
+
 html,body {
     margin:0;
     padding:0
