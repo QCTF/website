@@ -11,8 +11,7 @@
         <p>I have this crossword but I seem to have lost all of the hints.
         However, the answers must be from this list of words.
         Can you figure it out for me?</p>
-<pre><code>
-    #a#######
+<pre><code>    #a#######
 s   #  #  # #
 ##s##  r  # #
 #   ##########
@@ -24,6 +23,17 @@ s   #  #  # #
 </code></pre>
     </div>
     <p><a href="words.txt">words.txt</a></p>
+
+    <h2>Solution</h2>
+    <p>
+        As stated in one of the hints,
+        this can be thought of as a branch and bound problem.
+        There are too many possible permutations
+        for brute-forcing to be feasible,
+        even if words are only considered for valid lengths / solved letters.
+        Thus, one must only consider words which fit into a partial solution,
+        and all partial solutions must be considered to find the correct final solution.
+    </p>
 </body>
 
 </html>
