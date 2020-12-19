@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Crossword Walkthrough</title>
+    <link rel='stylesheet' href='/walkthrough/style.css' />
 </head>
 
 <body>
@@ -11,7 +12,8 @@
         <p>I have this crossword but I seem to have lost all of the hints.
         However, the answers must be from this list of words.
         Can you figure it out for me?</p>
-<pre><code>    #a#######
+<div class='code-block'>
+    #a#######
 s   #  #  # #
 ##s##  r  # #
 #   ##########
@@ -20,7 +22,8 @@ s   #  #  # #
     s  #  t g
     e  #
        #
-</code></pre>
+
+</div>
     </div>
     <p><a href="words.txt">words.txt</a></p>
 
@@ -34,6 +37,48 @@ s   #  #  # #
         Thus, one must only consider words which fit into a partial solution,
         and all partial solutions must be considered to find the correct final solution.
     </p>
+    <p>
+        To solve this problem in general (for arbitrary crossword size),
+        one would need to dynamically keep track of partial solutions.
+        However, in this scenario, the number of words is fixed,
+        and thus a nested for loop solution can work.
+    </p>
+    <p>
+        The first required ingredient is a function that determines
+        whether a word matches the "schema" for a given row or column.
+        Such a function could look like this.
+    </p>
+<div class='code-block'>
+def word_matches_schema(schema, word):
+'''
+schema looks like '##ah'
+word looks like 'yeah'
+'''
+return (
+    len(schema)==len(word) and
+    all(
+        schema_character in ['#', word_character]
+        for schema_character,word_character in zip(schema,word)
+    )
+)
+
+</div>
+    <p>
+        In addition to checking an individual word,
+        a function that returns ALL the words that match
+        a given schema is required.
+        Leveraging <code>word_matches_schema()</code>,
+        this can be written like so.
+    </p>
+<div class='code-block'>
+def possible_words(schema):
+    return (
+        word
+        for word in words
+        if word_matches_schema(schema,word)
+    )
+
+</div>
 </body>
 
 </html>

@@ -1,0 +1,11 @@
+.code-block {
+    font-family: monospace;
+    white-space: pre;
+    color: #4bff52;
+    background: #313131;
+}
+
+html,body {
+    margin:0;
+    padding:0
+}
