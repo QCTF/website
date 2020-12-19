@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Crossword Walkthrough</title>
+    <title>Crossword</title>
     <link rel='stylesheet' href='/walkthrough/style.css' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-<h1>Crossword Walkthrough</h1>
+<h1>QCTF Challenge Walkthrough: Crossword</h1>
 <h2>Description</h2>
 <p>I have this crossword but I seem to have lost all of the hints.
 However, the answers must be from this list of words.
@@ -28,6 +28,10 @@ s   #  #  # #
 </div>
 
 <h2>Solution</h2>
+<p>
+    <a onclick='document.getElementById("solution").toggleAttribute("hidden")')>[show/hide]</a>
+</p>
+<div hidden id='solution'>
 <p>
     As stated in one of the hints,
     this can be thought of as a branch and bound problem.
@@ -137,7 +141,8 @@ def solve():
 solution = solve()
 print(solution)
 
-</div class='code-block'>
+</div>
+</div>
 </body>
 
 </html>

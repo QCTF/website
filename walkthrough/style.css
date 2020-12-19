@@ -34,3 +34,8 @@ body {
     margin: auto;
     padding: 1em;
 }
+
+a {
+    color:blue;
+    cursor: pointer;
+}
