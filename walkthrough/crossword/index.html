@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crossword</title>
+    <link rel='stylesheet' href='/walkthrough/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<h1 class='title'>QCTF Challenge Walkthrough: Crossword</h1>
+<h2>Description</h2>
+<p>I have this crossword but I seem to have lost all of the hints.
+However, the answers must be from this list of words.
+Can you figure it out for me?</p>
+<p><a href="words.txt">words.txt</a></p>
+
+<div class='code-block'>
+    #a#######
+s   #  #  # #
+##s##  r  # #
+#   ##########
+#   #  #  # #
+###t##i######
+    s  #  t g
+    e  #
+    #
+
+</div>
+
+<h2>Solution</h2>
+<p>
+    <a onclick='document.getElementById("solution").toggleAttribute("hidden")')>[show/hide]</a>
+</p>
+<div hidden id='solution'>
+<p>
+    As stated in one of the hints,
+    this can be thought of as a branch and bound problem.
+    There are too many possible permutations
+    for brute-forcing to be feasible,
+    even if words are only considered for valid lengths / solved letters.
+    Thus, one must only consider words which fit into a partial solution,
+    and all partial solutions must be considered to find the correct final solution.
+</p>
+<p>
+    To solve this problem in general (for arbitrary crossword size),
+    one would need to dynamically keep track of partial solutions.
+    However, in this scenario, the number of words is fixed,
+    and thus a nested for loop solution can work.
+</p>
+<p>
+    The first required ingredient is a function that determines
+    whether a word matches the "schema" for a given row or column.
+    Such a function could look like this.
+</p>
+
+<div class='code-block'>
+def word_matches_schema(schema, word):
+'''
+schema looks like '##ah'
+word looks like 'yeah'
+'''
+return (
+    len(schema)==len(word) and
+    all(
+        schema_character in ['#', word_character]
+        for schema_character,word_character in zip(schema,word)
+    )
+)
+
+</div>
+<p>
+    In addition to checking an individual word,
+    a function that returns ALL the words that match
+    a given schema is required.
+    Leveraging <code>word_matches_schema()</code>,
+    this can be written like so.
+</p>
+
+<div class='code-block'>
+def possible_words(schema):
+    return (
+        word
+        for word in words
+        if word_matches_schema(schema,word)
+    )
+
+</div>
+
+<p>
+    Given all of the known connections between words
+    and the utility functions,
+    one can solve for the solution to the entire crossword.
+    Note that the order matters here.
+    Words should be solved such that early words have fewer possibilities.
+    For example, <code>eight_across</code> is the first word selected.
+    This is chosen because there are 2 letters already known
+    and the word is long enough that there are fewer words
+    with this many letters overall.
+</p>
+
+<div class='code-block'>
+'''
+    #a#######
+s   #  #  # #
+##s##  r  # #
+#   ##########
+#   #  #  # #
+###t##i######
+    s  #  t g
+    e  #
+       #
+
+one_across: #a#######
+one_down: ######se
+two_down: ##r######
+three_down: ######t
+four_down: ######g
+five_down: s####
+six_across: ##s##
+seven_across: ##########
+eight_across: ###t##i######
+'''
+
+def solve():
+    for eight_across in possible_words('###t##i######'):
+        for one_down in possible_words(f'#####{eight_across[4]}se'):
+            for two_down in possible_words(f'##r##{eight_across[7]}###'):
+                for one_across in possible_words(f'{one_down[0]}a#{two_down[0]}#####'):
+                    for seven_across in possible_words(f'{one_down[3]}##{two_down[3]}######'):
+                        for three_down in possible_words(f'{one_across[-3]}##{seven_across[-4]}#{eight_across[-3]}t'):
+                            for four_down in possible_words(f'{one_across[-1]}##{seven_across[-2]}#{eight_across[-1]}g'):
+                                for six_across in possible_words(f'##s#{one_down[2]}'):
+                                    for five_down in possible_words(f's{six_across[0]}##{eight_across[0]}'):
+                                        return [
+                                            one_across, one_down,
+                                            two_down, three_down,
+                                            four_down, five_down,
+                                            six_across, seven_across, eight_across
+                                        ]
+
+solution = solve()
+print(solution)
+
+</div>
+
+<p>
+    Full solution: <a href='solution.py'>solution.py</a>
+</p>
+
+</div>
+</body>
+
+</html>

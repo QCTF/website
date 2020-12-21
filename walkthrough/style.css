@@ -1,0 +1,45 @@
+.code-block {
+    font-family: monospace;
+    white-space: pre;
+    color: #4bff52;
+    background: #313131;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 2px 2px black;
+    overflow-x: auto;
+}
+
+.container {
+    justify-content: center;
+    display: flex;
+}
+
+.content {
+    width: 80%;
+}
+
+.title {
+    text-align: center;
+}
+
+html,body {
+    margin:0;
+    padding:0
+}
+
+html {
+    line-height: 1.5;
+    color:#222;
+    font-size: large;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1em;
+}
+
+a {
+    color:blue;
+    cursor: pointer;
+}
