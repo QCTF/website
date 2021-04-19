@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-size:12pt;
+    font-size:14pt;
 }
 
 .box {
@@ -57,8 +57,12 @@ h2 {
     margin: 0 auto;
     max-width: 800px;
     flex-wrap: wrap;
-    background:#eeeeee;
+}
+
+.hackermans-box {
+    background:white;
     border-radius:1em;
+	padding:1em;
 }
 
 .person {
