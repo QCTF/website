@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,7 +9,7 @@
 <meta name="author" content="Queen's CTF (QCTF) team">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 <link href="qctf.css" rel="stylesheet" type="text/css" media="all" />
@@ -22,7 +22,6 @@
 	<div id="logo"> 
 		<span > <img src="images/QTCF_Transparent_Logo_cropped.png" alt="QCTF LOGO" class='logo'></span>
 		
-		<h1><a href="#"></a></h1>
 		<span><p>A cyber security capture the flag event at Queen's University </p></span> </div>
 	<div id="menu">
 		<ul>
@@ -48,9 +47,10 @@
 				Below are some the categories you might encounter.
 			</p>
 		</div>
+	</div>
 
-
-		<div class="flex-row">
+	<div class="hackermans">
+		<div class="thin hackermans-box flex-row">
 			<div class="box">
 				<span class="icon icon-wrench"></span>
 				<h3>Reverse engineering</h3>
@@ -88,7 +88,7 @@
 	<div id="wrapper2">
 		
 		<div id="welcome" class="container">
-			<div class="title">
+			<div class="text-center title">
 				<h2>Join us</h2>
 			</div>
 			<p>
@@ -110,23 +110,38 @@
 	</div>
 </div>
 <div id="sponsor-us" class="container">
-	<div class="title">
-		<h2>SPONSOR US</h2>
+	<div class="text-center title">
+		<h2>
+            Sponsor Us
+        </h2>
 	</div>
-	<p>Is your company looking to hire young talent in tech, security, and software? </p>
-	<p>Sponsor us to get your company seen here!</p>
-	<p>Sponsorship includes access to our participants opt-in resume bank, networking opportunities and lots of exposure.</p>
-	<p>Sponsorship can take the form of monetary donations, competition prize donations, hardware donations, or even offering to host parts of the ctf infrastructure.</p> 
-	<p>Read our <a href="pdf/QCTF-Sponsorship-Package.pdf">Sponsorship Package</a> or contact us for more information. </p>
-	<img class="engsoc-logo" src="images/engsoc-logo.png"/>
+	<h3>Benefits</h3>
+	<ul class="benefits">
+		<li>Access to participants opt-in resume bank</li>
+		<li>
+			Ability to network with undergraduate students 
+			in Computer Science and Computer Engineering programs
+		</li>
+	</ul>
 	<p>
-		QCTF operates as a ratified conference under the Engineering Society at Queen's University.
-		Our constitution is available <a href="pdf/constitution.pdf">here</a>.
-	</p>
+        Sponsorship can take the form of 
+        monetary donations, competition prize donations, hardware donations, 
+        or even offering to host parts of the ctf infrastructure.
+	    Read our 
+        <a href="pdf/QCTF-Sponsorship-Package.pdf">Sponsorship Package</a>
+        or contact us for more information.
+    </p>
+	<div class="gap">
+        QCTF operates as a ratified conference 
+        under the Engineering Society at Queen's University.
+        For additional details, please see our
+        <a href="pdf/constitution.pdf">constitution</a>.
+	</div>
 	
 </div>
+<div class="hackermans">
 <div id="walkthroughs">
-	<div class="container">
+	<div class="hackermans-box container">
 		<div class="title">
 			<h2>Walkthroughs</h2>
 		</div>
@@ -139,50 +154,69 @@
 		</ul>
 	</div>
 </div>
+</div>
 <div id="contact-us">
 	<div class="container">
-		<div class="title">
+		<div>
 			<h2>Contact us</h2>
-			<div class='flex-row'>
+			<div class='people'>
 				<div class="person">
 					<h3>Ted Brownlow</h3>
-					<img class="circle" src="images/people/ted.png" />
+					<img alt="Ted Brownlow" class="circle" src="images/people/ted.png" />
 				</div>
 				<div class="person">
 					<h3>Nathaniel Pauzé</h3>
-					<img class="circle" src="images/people/nat.jpg" />
+					<img alt="Nathaniel Pauzé"
+                    class="circle" src="images/people/nat.jpg" />
 				</div>
 				<div class="person">
 					<h3>Elisabeth Maliukova</h3>
-					<img class="circle" src="images/people/elisabeth.jpg" />
+					<img 
+                        alt="Elisabeth Maliukova"
+                        class="circle" src="images/people/elisabeth.jpg" />
 				</div>
 				<div class="person">
 					<h3>Aiden Peters</h3>
-					<img class="circle" src="images/people/aiden.jpg" />
+					<img alt="Aiden Peters" 
+                        class="circle" src="images/people/aiden.jpg" />
 				</div>
 				<div class="person">
 					<h3>Raed Fayad</h3>
-					<img class="circle" src="images/people/raed_cropped.jpg" />
+					<img 
+                        alt="Raed Fayed"    
+                    class="circle" src="images/people/raed_cropped.jpg" />
 				</div>
 				<div class="person">
 					<h3>Siddharth Sharma</h3>
-					<img class="circle" src="images/people/siddharth.jpg" />
+					<img 
+                    alt="Siddharth Sharma" 
+                    class="circle" src="images/people/siddharth.jpg" />
 				</div>
 				<div class="person">
 					<h3>Ava Little</h3>
-					<img class="circle" src="images/people/ava.jpg" />
+					<img alt="Ava Little"
+                    class="circle" src="images/people/ava.jpg" />
 				</div>
 			</div>
-			<h3><a href="mailto:qctf@engsoc.queensu.ca">qctf@engsoc.queensu.ca</a> | <a href="mailto:info@qctf.ca">info@qctf.ca</a></h3>
-		<ul class="contact">
-			<li><a href="https://www.instagram.com/queens_ctf/" class="icon icon-instagram"><span>Twitter</span></a></li>
-			<li><a href="https://www.facebook.com/qctf1" class="icon icon-facebook"><span></span></a></li>
-			
-		</ul>
+            <div class="footer">
+                    <a 
+                        href="https://www.instagram.com/queens_ctf/" 
+                        class="icon icon-instagram"
+						><span>Instagram</span></a>
+                    <span class="inline-block">
+                    <a class="block" href="mailto:qctf@engsoc.queensu.ca">
+                        qctf@engsoc.queensu.ca
+                    </a>
+                    <a class="block" href="mailto:info@qctf.ca">
+                        info@qctf.ca
+                    </a>
+                    </span>
+                    <a 
+                        href="https://www.facebook.com/qctf1" 
+                        class="icon icon-facebook">
+						<span>Facebook</span></a>
+            </div>
 	</div>
-</div>
-<div id="copyright" class="container">
-	<p>&copy; QCTF. All rights reserved. | Design adapted from Embellished by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
 </div>
 </body>
 </html>

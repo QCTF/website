@@ -19,6 +19,10 @@
 		margin: 0;
 		padding: 0;
 	}
+
+    h3 {
+        margin-bottom:1em;
+    }
 	
 	p, ol, ul
 	{
@@ -27,8 +31,6 @@
 	
 	ol, ul
 	{
-		padding: 0;
-		list-style: none;
 	}
 	
 	p
@@ -296,8 +298,8 @@
 	
 	.title h2
 	{
-		font-size: 2.8em;
-		color: #261300;
+		font-size: 2em;
+		/*color: #261300;*/
 	}
 	
 	.title .byline
@@ -427,7 +429,8 @@
 
 	#wrapper2
 	{
-		background: #757575;
+		background:#9c1939;
+		color:#eee;
 	}
 
 	#wrapper3
@@ -464,7 +467,6 @@
 		max-width: 1000px;
 		padding: 4em 2em 4em 2em;
 		text-align: center;
-		color: rgba(255,255,255,0.4);
 	}
 	
 	#welcome .content
@@ -526,6 +528,8 @@
 	{
 		color: rgba(255,255,255,1);
 		text-decoration: none;
+        flex-grow: 1;
+        height:2em;
 	}
 	
 	#contact-us a
