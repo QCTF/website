@@ -2,8 +2,15 @@ html {
     scroll-behavior: smooth;
 }
 
+ul.benefits li {
+    margin-bottom:3em;
+}
+
+#menu ul {padding:0;}
+
 body {
-    font-size:14pt;
+    font-size:13pt;
+    overflow-x:hidden;
 }
 
 .box {
@@ -22,7 +29,6 @@ h2 {
 }
 
 #sponsor-us {
-    text-align: center;
     color:rgba(0,0,0,0.8);
     padding:2em;
 }
@@ -41,6 +47,7 @@ h2 {
 #contact-us {
     background: #1B1B1B;
     padding-top:3em;
+    color:white;
 }
 
 .circle {
@@ -50,24 +57,33 @@ h2 {
     aspect-ratio:1;
 }
 
+.thin {
+    max-width:800px;
+}
+
 .flex-row {
-    color:#444;
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    max-width: 800px;
     flex-wrap: wrap;
 }
 
 .hackermans-box {
+    color:#444;
     background:white;
     border-radius:1em;
-	padding:1em;
+    padding:1em;
 }
 
 .person {
     padding:1em;
     width:min(10em,30vw);
+    aspect-ratio:1;
+    display:inline-block;
+}
+
+.person h3 {
+    height:2em;
 }
 
 #contact-us h3 {
@@ -83,11 +99,11 @@ h2 {
 }
 
 #welcome p {
-    color:white;
+/*    color:white;*/
 }
 
 #welcome a {
-    color:#58ffd9
+    color:inherit;
 }
 
 .logo {
@@ -125,4 +141,38 @@ h2 {
     background-attachment:fixed;
     background-size:cover;
     background-color:#000d;
+}
+
+.text-center {
+    text-align:center;
+}
+
+ul {
+}
+
+@media screen and (max-width:800px) {
+    .hackermans-box {
+        border-radius:0;
+    }
+}
+
+.gap {margin-top:3em;}
+
+.footer {
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding-bottom:1em;
+}
+
+.footer * {
+    padding:0 1em;
+}
+
+.block {
+    display:block;
+}
+.inline-block {
+    display:inline-block;
+}
+.icon {
+    font-size:1.5em;
 }
