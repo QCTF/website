@@ -18,6 +18,8 @@ body {
     font-size:1.2em;
     padding:1em;
     border-radius:1em;
+    justify-content: center;
+
 }
 
 h2 {
@@ -25,30 +27,71 @@ h2 {
 }
 
 .box h3 {
-    display: inline;
+    display: center;
+    justify-content: center;
+
 }
 
 #sponsor-us {
-    color:rgba(0,0,0,0.8);
-    padding:2em;
+    color:#444;
+    /* padding-top: 3em;
+    padding-bottom: 3em; */
 }
 
 #header {
     padding-bottom: 2em;
 }
 
+
 #what-is-a-ctf {
-    padding-top:4em;
+    /* padding-top:3em; */
     background: rgb(228,228,228);
     background:#12335e;
     color:#eee;
 }
 
 #contact-us {
-    background: #1B1B1B;
-    padding-top:3em;
+    background: #262626;
+    /* padding-top:3em;
+    padding-bottom: 3em; */
     color:white;
 }
+#about-us {
+    background: #6d1d2d;
+    /* padding-top:3em;
+    padding-bottom: 3em; */
+    color:white; 
+}
+
+#exec-team {
+    background: #262626;
+    /* padding-top:3em;
+    padding-bottom: 3em; */
+    color:white;
+}
+/* 
+#exec-join-us{
+    padding-top:2em;
+    padding-bottom: 2em;
+} */
+#exec-join-us p{
+    text-align:center;
+    color:#444;
+
+}
+#exec-join-us h2{
+    text-align:center;
+    color:#444;
+
+}
+/* #exec-join-us .title h2{
+    text-align:center;
+    text-decoration: none;
+    flex-grow: 1;
+    height:2em;
+    letter-spacing:0.05em;
+
+} */
 
 .circle {
     border-radius:100%;
@@ -75,18 +118,35 @@ h2 {
     padding:1em;
 }
 
+/* .person {
+    padding:1em;
+    width:min(10em,30vw);
+    aspect-ratio:1;
+    display:inline-table;
+    justify-content: center;
+} */
+
 .person {
     padding:1em;
     width:min(10em,30vw);
     aspect-ratio:1;
-    display:inline-block;
+    justify-content: center;
+
 }
 
 .person h3 {
     height:2em;
+    text-align:center;
+
 }
 
-#contact-us h3 {
+/* .people{
+    justify-content: center;
+
+} */
+
+#cexec-team h3 {
+    text-align:center;
 }
 
 #portfolio h3 {
@@ -96,14 +156,19 @@ h2 {
 .container {
     padding-left:1em;
     padding-right:1em;
+    padding-top:4em;
+    padding-bottom: 4em;
 }
 
-#welcome p {
-/*    color:white;*/
+
+#about-us p {
+    text-align:center;
 }
 
-#welcome a {
+#about-us a {
     color:inherit;
+    text-align:center;
+
 }
 
 .logo {
