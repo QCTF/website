@@ -98,6 +98,9 @@ h2 {
     width:min(100%,10em);
     object-fit: cover;
     aspect-ratio:1;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .thin {
@@ -128,13 +131,19 @@ h2 {
 
 .person {
     padding:1em;
-    width:min(10em,30vw);
+    width:min(11em,30vw);
     aspect-ratio:1;
     justify-content: center;
 
 }
 
 .person h3 {
+    /* height:2em; */
+    text-align:center;
+
+}
+
+.person h4 {
     height:2em;
     text-align:center;
 
