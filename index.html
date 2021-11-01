@@ -10,6 +10,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://fonts.gstatic.com'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&amp;display=swap'>
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 <link href="qctf.css" rel="stylesheet" type="text/css" media="all" />
@@ -25,15 +28,57 @@
 
   gtag('config', 'G-GT7G2ZB7CV');
 </script>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Nov 20, 2021 10:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "QCTF has started!";
+  }
+}, 1000);
+</script>
 </head>
 
 <body>
-<div id="header" class="container">
 
+<div id="header" class="container">
+	<div class= "container" >
+	<div id="clock">
+        <p class="date">QCTF STARTS IN</p>
+		<!-- <p class="date">2021-11-20 SAT</p> -->
+		<p class="time" id="demo"></p>
+		
+ 
+	</div>
+	</div>
 	<div id="logo"> 
 		<span > <img src="images/QTCF_Transparent_Logo_cropped.png" alt="QCTF LOGO" class='logo'></span>
 		
-		<span><p>A cyber security capture the flag event at Queen's University </p></span> </div>
+		<span><p>A cyber security capture the flag event at Queen's University </p></span> 
+		<span><p>Virtually on November 20th, 2021 from 10am-10pm</p></span> 
+	</div>
+		
 	<div id="menu">
 		<ul>
 			<li class="current_page_item"><a href="#what-is-a-ctf" title="">What's a CTF?</a></li>
@@ -46,6 +91,32 @@
 	</div>
 </div>
 
+<div id="sign-up-button">
+	<div class="container">
+		<center>
+			<div>
+			<!-- <p> Would you like to win 100 points before the competition has even started? </br> Download the WealthSimple Cash app to get $25 and bonus points for the competition! </p> -->
+				<!-- <a class='button2' href="https://forms.gle/93kaeCGvxkZQYeNAA">Sign Up Now!</a> -->
+			</div>
+			<main>
+				
+				<a href="https://forms.gle/VjyzsoT275wrn82FA"><button>Sign Up Now!</button></a>
+			</main>
+		</center>
+	</div>
+</div>
+<div id="sign-up-panel">
+	<div class="container text-center">
+		<div id= wealthsimple-logo-block >
+		<span > <img src="images/qctfXWealthsimpleCash.png" alt="QCTF and WealthSimple Cash logo" id ="wealthsimple" ></span>
+		</div>
+		<p> Would you like some free cash? Would you also like to gain 25 points before the event has even started (equivalent to solving a level 1 challenge)? Sign up for WealthSimple Cash using our promo code and send us your cash handle to get yourself $25 from WealthSimple and 25 points for QCTF!  </p>
+		<p> Checkout the form below for more details on this promo! </p>
+		<div id="wealthsimple-button" >
+			<a class='button2' href="https://forms.gle/QDd4Eca7GsBvqbBh9">Register</a>
+		</div>
+	</div>
+</div>
 
 <div id="what-is-a-ctf">
 	<div class="container text-center">
@@ -99,7 +170,7 @@
 	</div>
 </div>
 
-<div id="exec-join-us">
+<!-- <div id="exec-join-us">
 	<div class="hackermans">
 			<div class="hackermans-box container">
 				<div id="exec-join-us" class="text-center title">
@@ -120,7 +191,7 @@
 
 		</div>
 	</div>
-</div>
+</div> -->
 
 <div id="about-us">
 		
@@ -263,14 +334,6 @@
 					</div>
 					<img alt="Adrienne Lee" 
                         class="circle" src="images/people/adrienne.jpg" />
-				</div>
-				<div class="person">
-					<div class="identity">
-						<h3>Shams Sultan</h3>
-						<h4>Challenge Coordinator</h4>
-					</div>
-					<img alt="Shams Sultan" 
-					class="circle" src="images/people/shams.jpg" />
 				</div>
 				<div class="person">
 					<div class="identity">

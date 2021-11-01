@@ -53,7 +53,20 @@
 	.person {
 		padding: 1em 1em 0em;
 	}
-	
+	#clock .text {
+	font-size: 1.3rem;
+	}
+	#clock .time {
+
+		font-size: 2.5rem;
+
+	}
+	button {
+		width: 13em;
+	}
+	#wealthsimple {
+	max-width: 20em;	
+	}
 }
 
 /*****************************************************************************/
@@ -63,15 +76,38 @@
 	.person {
 		padding: 1em;
 	}
+	#clock .time {
+
+		font-size: 2.3rem;
+
+	}
+	
+	#wealthsimple {
+	max-width: 18em;	
+	}
 	
 }    
 
-
+@media only screen and (max-width: 321px) {
+	button {
+		width: 10em;
+	}
+	#wealthsimple {
+	max-width: 16em;	
+	}
+} 
 /*****************************************************************************/
 /* Some desktops and larger (992px) */
 /*****************************************************************************/
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 280px) {
+#wealthsimple {
+	max-width: 13em;	
+	}
+	#clock .time {
 
+		font-size: 1.8rem;
+
+	}
 }
 
 
