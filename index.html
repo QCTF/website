@@ -55,6 +55,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "QCTF has started!";
+	document.getElementById("timer-desc").innerHTML = "";
   }
 }, 1000);
 </script>
@@ -65,7 +66,7 @@ var x = setInterval(function() {
 <div id="header" class="container">
 	<div class= "container" >
 	<div id="clock">
-        <p class="date">QCTF STARTS IN</p>
+        <p class="date" id="timer-desc">QCTF STARTS IN</p>
 		<!-- <p class="date">2021-11-20 SAT</p> -->
 		<p class="time" id="demo"></p>
 		
@@ -95,7 +96,8 @@ var x = setInterval(function() {
 	<div class="container" id="sign-up-button">
 		<center>
 			<main>
-				<a href="https://forms.gle/VjyzsoT275wrn82FA"><button>Sign Up Now!</button></a>
+				<!-- <a href="https://forms.gle/VjyzsoT275wrn82FA"><button>Sign Up Now!</button></a> -->
+				<a><button>Sign up is now closed.</button></a>
 			</main>
 		</center>
 	</div>
