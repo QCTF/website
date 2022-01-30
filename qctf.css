@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 ul.benefits li {
@@ -275,12 +276,12 @@ ul {
   margin: 0 auto;
   color: #daf6ff;
   text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
-
+  z-index: 100;	
   overflow: hidden;
   /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%;
-
+  box-sizing: border-box;
   padding-top: 3em;
   padding-bottom: 1em;
 }
@@ -321,7 +322,12 @@ padding-top: 1em;
 #wealthsimple-logo-block {
   padding: 1em 0em;
 }
-
+div {
+  box-sizing: border-box;
+  }
+body{
+  overflow-x: hidden !important;
+}									
 .sign-up {
   font-size: 2em;
   font-family: monospace;
@@ -403,6 +409,7 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  z-index: 0;			 
 }
 button:before,
 button:after {
